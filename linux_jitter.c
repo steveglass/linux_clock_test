@@ -20,7 +20,7 @@
 #define NSECS_IN_SECOND 1000000000
 #define SLEEP_ITERATION_MS 5
 #define BASELINE_ITERATIONS 100
-#define SKEW_NOTIFY_THRESHOLD_PERCENT 5
+#define SKEW_NOTIFY_THRESHOLD_PERCENT 10
 
 void normalize_tv(struct timeval *tv)
 {
