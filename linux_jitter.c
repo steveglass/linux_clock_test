@@ -60,7 +60,7 @@ void normalize_ts(struct timespec *ts)
 {
         if (ts->tv_nsec >= NSECS_IN_SECOND) {
                         /* if more than 5 trips through loop required, then do divide and mod */
-                        if (ts->tv_nsec >= (NSECS_IN_SECOND*5)) {
+                        if (ts->tv_nsec >= ((long int)NSECS_IN_SECOND*5)) {
                                 ts->tv_sec += (ts->tv_nsec / NSECS_IN_SECOND);
                                 ts->tv_nsec = (ts->tv_nsec % NSECS_IN_SECOND);
                         } else {
@@ -71,7 +71,7 @@ void normalize_ts(struct timespec *ts)
                         }
         } else if (ts->tv_nsec <= -NSECS_IN_SECOND) {
                         /* if more than 5 trips through loop required, then do divide and mod */
-                        if (ts->tv_nsec <= (-NSECS_IN_SECOND*5)) {
+                        if (ts->tv_nsec <= ((long int)-NSECS_IN_SECOND*5)) {
                                 ts->tv_sec -= (ts->tv_nsec / -NSECS_IN_SECOND); /* neg / neg = pos so subtract */
                                 ts->tv_nsec = (ts->tv_nsec % -NSECS_IN_SECOND); /* neg % neg = neg */
                         } else {
