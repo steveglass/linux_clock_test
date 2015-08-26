@@ -18,10 +18,11 @@ of the baseline.
 
 ### Configuring the Test
 
+```
 Linux Jitter Usage: [-h help] [-b baseline-iterations] [-n notify-threshold] [-s sleep-interval]
 Available options:
     -h       Display help
     -b       Number of baseline iterations (Default=100)
     -n       Notify threshold percent(default=10)
     -s       Duration of the sleep interval in milliseconds (Default=5ms)
-
+```
